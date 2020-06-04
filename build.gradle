@@ -1,0 +1,17 @@
+allprojects {
+    group "com.ellendan.service.template"
+
+    repositories {
+        maven {
+            credentials {
+                username = "jfrog"
+                password = "jfrog123456"
+            }
+            url "http://localhost:8082/artifactory/libs-snapshot/"
+        }
+    }
+
+    configurations.all {
+        resolutionStrategy.cacheChangingModulesFor 60, "minutes"
+    }
+}

@@ -1,0 +1,42 @@
+plugins {
+    id 'maven-publish'
+    id 'java-platform'
+}
+
+version '0.1.1-SNAPSHOT'
+
+javaPlatform {
+    allowDependencies()
+}
+dependencies {
+    api platform('org.springframework.boot:spring-boot-dependencies:2.2.6.RELEASE')
+    api platform('org.springframework.cloud:spring-cloud-dependencies:Greenwich.SR3')
+    api platform('org.springframework.cloud:spring-cloud-contract-dependencies:2.2.3.RELEASE')
+    api platform('org.junit:junit-bom:5.3.2')
+    constraints {
+        api 'org.projectlombok:lombok:1.18.12'
+    }
+}
+
+publishing {
+    repositories {
+        maven {
+            credentials {
+                username = 'jfrog'
+                password = 'jfrog123456'
+            }
+
+            def releasesRepoUrl = 'http://localhost:8082/artifactory/libs-release/'
+            def snapshotsRepoUrl = 'http://localhost:8082/artifactory/libs-snapshot/'
+            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+        }
+    }
+
+    publications {
+        myPlatform(MavenPublication) {
+            from components.javaPlatform
+        }
+    }
+}
+
+
