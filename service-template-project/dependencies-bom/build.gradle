@@ -14,7 +14,14 @@ dependencies {
     api platform('org.springframework.cloud:spring-cloud-contract-dependencies:2.2.3.RELEASE')
     api platform('org.junit:junit-bom:5.3.2')
     constraints {
-        api 'org.projectlombok:lombok:1.18.12'
+        api 'com.google.guava:guava:27.0.1-jre'
+
+        api 'ch.vorburger.mariaDB4j:mariaDB4j-springboot:2.4.0'
+        api 'org.mariadb.jdbc:mariadb-java-client:2.2.5'
+
+        api 'org.mockito:mockito-core:2.22.0'
+        api 'org.mockito:mockito-junit-jupiter:2.22.0'
+        api 'org.assertj:assertj-core:3.11.1'
     }
 }
 
