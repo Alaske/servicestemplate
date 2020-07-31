@@ -22,4 +22,6 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: publish pom
-      run: ./gradlew clean service-template-project:dependencies-bom:publish -Dtoken=${{ secrets.GITHUB_TOKEN }}
+      run: ./gradlew clean service-template-project:dependencies-bom:publish
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
