@@ -29,13 +29,9 @@ publishing {
     repositories {
         maven {
             credentials {
-                username = 'jfrog'
-                password = 'jfrog123456'
+                username = 'ellendan000@gmail.com'
             }
-
-            def releasesRepoUrl = 'http://localhost:8082/artifactory/libs-release/'
-            def snapshotsRepoUrl = 'http://localhost:8082/artifactory/libs-snapshot/'
-            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+            url = 'https://maven.pkg.github.com/ellendan000/service_template'
         }
     }
 
