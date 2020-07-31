@@ -10,7 +10,7 @@ on:
     branches: [ master ]
 
 jobs:
-  publish-pomgts:
+  publish-bom:
     runs-on: ubuntu-latest
 
     steps:
