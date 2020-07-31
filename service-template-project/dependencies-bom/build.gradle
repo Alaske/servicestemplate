@@ -28,7 +28,7 @@ dependencies {
 publishing {
     repositories {
         maven {
-            url 'https://maven.pkg.github.com/ellendan000'
+            url 'https://maven.pkg.github.com/ellendan000/service_template'
         }
     }
 
