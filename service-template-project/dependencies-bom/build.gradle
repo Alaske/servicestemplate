@@ -3,7 +3,7 @@ plugins {
     id 'java-platform'
 }
 
-version '0.1.1-SNAPSHOT'
+version '0.1.1'
 
 javaPlatform {
     allowDependencies()
@@ -28,15 +28,12 @@ dependencies {
 publishing {
     repositories {
         maven {
-            credentials {
-                username = 'ellendan000@gmail.com'
-            }
-            url = 'https://maven.pkg.github.com/ellendan000/service_template'
+            url 'https://maven.pkg.github.com/ellendan000'
         }
     }
 
     publications {
-        myPlatform(MavenPublication) {
+        versionPlatform(MavenPublication) {
             from components.javaPlatform
         }
     }
