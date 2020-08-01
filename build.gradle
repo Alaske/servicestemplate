@@ -1,8 +1,16 @@
 allprojects {
-    group "com.ellendan.service.template"
+    group "com.github.ellendan000"
 
     repositories {
         maven { url 'https://jitpack.io' }
+        maven {
+            url 'https://maven.pkg.github.com/ellendan000/service_template'
+            credentials {
+                username = "${repoUser}"
+                password = "${repoPassword}"
+            }
+        }
+        mavenCentral()
     }
 
     configurations.all {
