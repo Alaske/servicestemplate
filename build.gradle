@@ -6,8 +6,8 @@ allprojects {
         maven {
             url 'https://maven.pkg.github.com/ellendan000/service_template'
             credentials {
-                username = System.getenv("repoUser")?:"${repoUser}"
-                password = System.getenv("repoToken")?:"${repoToken}"
+                username = System.getenv("ACCESS_USER")?:"${repoUser}"
+                password = System.getenv("PACKAGES_ACCESS_TOKEN")?:"${repoToken}"
             }
         }
         mavenCentral()
