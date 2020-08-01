@@ -11,7 +11,7 @@ on:
 
 jobs:
   publish-bom:
-    if: contains(github.ref, "tag")
+    if: contains(github.ref, 'tag')
     runs-on: ubuntu-latest
 
     steps:
