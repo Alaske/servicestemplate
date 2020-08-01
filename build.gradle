@@ -3,13 +3,13 @@ allprojects {
 
     repositories {
         maven { url 'https://jitpack.io' }
-        maven {
-            url 'https://maven.pkg.github.com/ellendan000/service_template'
-            credentials {
-                username = "${repoUser}"
-                password = "${repoPassword}"
-            }
-        }
+//        maven {
+//            url 'https://maven.pkg.github.com/ellendan000/service_template'
+//            credentials {
+//                username = "${repoUser}"
+//                password = "${repoPassword}"
+//            }
+//        }
         mavenCentral()
     }
 
