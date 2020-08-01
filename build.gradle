@@ -1,5 +1,13 @@
+plugins {
+    id 'org.ajoberstar.grgit' version '3.0.0'
+}
+def getLatestTagName = { ->
+    "${grgit.tag.list().last().getName()}"
+}
+
 allprojects {
     group "com.github.ellendan000"
+    version getLatestTagName()
 
     repositories {
         maven { url 'https://jitpack.io' }
