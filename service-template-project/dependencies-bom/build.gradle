@@ -12,6 +12,7 @@ dependencies {
     api platform('org.springframework.cloud:spring-cloud-contract-dependencies:2.2.3.RELEASE')
     api platform('org.junit:junit-bom:5.3.2')
     constraints {
+        api 'org.springframework.kafka:spring-kafka:2.4.8.RELEASE'
         api 'com.google.guava:guava:27.0.1-jre'
 
         api 'ch.vorburger.mariaDB4j:mariaDB4j-springboot:2.4.0'
