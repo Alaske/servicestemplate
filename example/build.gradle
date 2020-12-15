@@ -5,14 +5,14 @@ plugins {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-//dependencies {
-//    implementation platform('com.github.ellendan000:dependencies-bom:0.3.0-SNAPSHOT')
-//
-//    implementation 'org.springframework.boot:spring-boot-starter-web'
-//    implementation 'org.springframework.boot:spring-boot-starter-security'
-//    compileOnly 'org.projectlombok:lombok'
-//    annotationProcessor 'org.projectlombok:lombok'
-//}
+dependencies {
+    implementation platform('com.github.ellendan000:service_template:0.3.4-SNAPSHOT')
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+}
 
 task sourcesJar(type: Jar, dependsOn: classes) {
     archiveClassifier = 'sources'
