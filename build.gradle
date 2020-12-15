@@ -4,20 +4,14 @@ plugins {
 def getLatestTagName = { ->
     "${grgit.tag.list().last().getName()}"
 }
-
 allprojects {
     group "com.github.ellendan000"
     version getLatestTagName()
+}
 
+subprojects {
     repositories {
         maven { url 'https://jitpack.io' }
-        maven {
-            url 'https://maven.pkg.github.com/ellendan000/service_template'
-            credentials {
-                username = System.getenv("ACCESS_USER")?:"${repoUser}"
-                password = System.getenv("PACKAGES_ACCESS_TOKEN")?:"${repoToken}"
-            }
-        }
         mavenCentral()
     }
 
