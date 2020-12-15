@@ -5,16 +5,19 @@ def getLatestTagName = { ->
     "${grgit.tag.list().last().getName()}"
 }
 
-subprojects {
-    group "com.github.ellendan000"
+allprojects {
+    group 'com.github.ellendan000'
+    artifact 'dependencies-bom'
     version getLatestTagName()
+}
 
+subprojects {
     repositories {
         maven { url 'https://jitpack.io' }
         mavenCentral()
     }
 
     configurations.all {
-        resolutionStrategy.cacheChangingModulesFor 60, "minutes"
+        resolutionStrategy.cacheChangingModulesFor 60, 'minutes'
     }
 }
