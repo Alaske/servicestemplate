@@ -4,12 +4,11 @@ plugins {
 def getLatestTagName = { ->
     "${grgit.tag.list().last().getName()}"
 }
-allprojects {
-    group "com.github.ellendan000"
-    version getLatestTagName()
-}
 
 subprojects {
+    group "com.github.ellendan000"
+    version getLatestTagName()
+
     repositories {
         maven { url 'https://jitpack.io' }
         mavenCentral()
