@@ -1,4 +1,3 @@
 rootProject.name = 'service_template'
 include 'service-template-project:dependencies-bom'
-include 'example'
-
+//include 'example'
