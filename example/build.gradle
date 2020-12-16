@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'maven-publish'
+    id 'org.springframework.boot' version '2.2.6.RELEASE'
 }
 
 sourceCompatibility = 1.8

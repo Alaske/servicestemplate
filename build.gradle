@@ -7,7 +7,6 @@ def getLatestTagName = { ->
 
 allprojects {
     group 'com.github.ellendan000'
-    artifact 'dependencies-bom'
     version getLatestTagName()
 }
 
