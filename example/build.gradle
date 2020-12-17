@@ -30,3 +30,11 @@ artifacts {
     archives sourcesJar
     archives javadocJar
 }
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+}
