@@ -6,14 +6,14 @@ name: Java CI with Gradle
 on:
   push:
     branches: [ master ]
-  #    tags:
-  #      "*"
+      tags:
+        "*"
   pull_request:
     branches: [ master ]
 
 jobs:
   publish-bom:
-    #    if: contains(github.ref, 'tags')
+    if: contains(github.ref, 'tags')
     runs-on: ubuntu-latest
 
     steps:
