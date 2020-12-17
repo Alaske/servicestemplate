@@ -6,7 +6,7 @@ def getLatestTagName = { ->
 }
 
 allprojects {
-    group 'com.github.ellendan000'
+    group 'com.github.ellendan000.servicestemplate'
     version getLatestTagName()
 }
 
