@@ -8,7 +8,7 @@ repositories {
      maven { url "https://jitpack.io" }
 }
 dependencies {
-      implementation 'com.github.ellendan000:dependencies-bom:<version>'
+      implementation 'com.github.ellendan000.servicestemplate:dependencies-bom:<version>'
 }
 ```
 
